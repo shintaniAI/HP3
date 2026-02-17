@@ -26,16 +26,16 @@ const HERO_CHATS = [
 
 const CLIENTS = [
   { name: "BUZZ SHIP", cat: "デジタルマーケティング", desc: "既存リストの最適化により広告費を抑制しながら月商を大幅増", accent: "#1a1a1a", logo: "/client-buzzship.png", scale: 0.75 },
-  { name: "BREAKING DOWN", cat: "格闘エンタメ", desc: "大規模イベント集客とファンエンゲージメントをLINE基盤で構築", accent: "#1D3557", logo: "/client-breakingdown.png", scale: 1.15, screenImage: "/screen-BREAKINGDOWN.png", imgFit: "contain" },
+  { name: "BREAKING DOWN", cat: "格闘エンタメ", desc: "大規模イベント集客とファンエンゲージメントをLINE基盤で構築", accent: "#1D3557", logo: "/client-breakingdown.png", scale: 1.15, screenImage: "/screen-BREAKINGDOWN.png", isMockupImage: true },
 
 
-  { name: "HERO'ZZ", cat: "スクール", desc: "プッシュ配信施策により短期間で5,000万円超の売上を創出", accent: "#E76F51", logo: "/client-herozz-banner.png", scale: 1.08, screenImage: "/screen-HEROZZ.png", imgFit: "contain" },
+  { name: "HERO'ZZ", cat: "スクール", desc: "プッシュ配信施策により短期間で5,000万円超の売上を創出", accent: "#E76F51", logo: "/client-herozz-banner.png", scale: 1.08, screenImage: "/screen-HEROZZ.png", isMockupImage: true },
 
 
-  { name: "V CLINIC", cat: "美容クリニック", desc: "予約管理の自動化と顧客体験の向上をLINEで実現", accent: "#C5A882", logo: "/client-vclinic.png", scale: 1.08, screenImage: "/screen-VCLINIC.jpg", imgFit: "contain" },
+  { name: "V CLINIC", cat: "美容クリニック", desc: "予約管理の自動化と顧客体験の向上をLINEで実現", accent: "#C5A882", logo: "/client-vclinic.png", scale: 1.08, screenImage: "/screen-VCLINIC.jpg", isMockupImage: true },
 
 
-  { name: "AI+", cat: "テクノロジー", desc: "AI活用サービスのユーザー獲得とリテンションをLINEで最適化", accent: "#111", logo: "/client-aiplus.png", fill: true },
+  { name: "AI+", cat: "テクノロジー", desc: "AI活用サービスのユーザー獲得とリテンションをLINEで最適化", accent: "#111", logo: "/client-aiplus.png", fill: true, screenImage: "/screen-AIplus.png", isMockupImage: true },
   { name: "REAL VALUE ACADEMIA", cat: "教育", desc: "オンラインスクールの集客・受講生管理をLINEで一元化", accent: "#1a1a1a", logo: "/client-realvalue-academia.png", scale: 1.5 },
   { name: "WEIN CAREER", cat: "人材", desc: "中卒・高卒採用に特化した人材紹介をLINEで効率化", accent: "#E53935", logo: "/client-weincareer.png" },
   { name: "Expert Partners", cat: "人材", desc: "オウンドメディア×LINEで面談予約率を4%→25%に改善", accent: "#2A3E6C", logo: "/client-expertpartners.png" },
@@ -88,10 +88,10 @@ const PersonAvatar = ({ color, gender, size = 56 }) => (
 );
 
 const STRENGTHS = [
-  { num: "01", ja: "圧倒的結果にコミット", sub: "伴走型支援で、KPI改善に責任を持ちます", desc: "ただの\u201C代行業者\u201Dではなく、圧倒的当事者意識で数字に向き合います。売上・予約数・CVなど、目標達成から逆算したLINE戦略を立案。改善のたびに報告・提案を行い、共に成果を追いかけ続けます。" },
-  { num: "02", ja: "オーダーメイドの自動化シナリオ設計", sub: "業種・サービスに最適な導線設計で成果を最大化", desc: "LINE登録、予約、教育、販売、リマインド、アフター対応まで。ユーザーの行動や属性に応じて分岐するLINEシナリオを設計し、人の手を介さずに\u201C売れる導線\u201Dを自動化します。" },
-  { num: "03", ja: "効果測定シートの作成・運用", sub: "LINE内全ての導線を数値化", desc: "すべての施策を数値で検証。LINE内の導線を可視化した効果測定シートを作成し、データに基づいたPDCAを高速回転させます。" },
-  { num: "04", ja: "数多くの実績・経験に基づいたデータ", sub: "VOYAGEには圧倒的なノウハウがあります", desc: "200社超の運用データから導き出した『成功の型』を、貴社に合わせてカスタマイズ。業界・業種ごとの豊富な実績と経験に基づき、成果に繋げる圧倒的なノウハウを提供します。" },
+  { num: "01", img: "/strength-illust-01.png", ja: "圧倒的結果にコミット", sub: "伴走型支援で、KPI改善に責任を持ちます", desc: "ただの\u201C代行業者\u201Dではなく、圧倒的当事者意識で数字に向き合います。売上・予約数・CVなど、目標達成から逆算したLINE戦略を立案。改善のたびに報告・提案を行い、共に成果を追いかけ続けます。" },
+  { num: "02", img: "/strength-illust-02.png", ja: "オーダーメイドの自動化シナリオ設計", sub: "業種・サービスに最適な導線設計で成果を最大化", desc: "LINE登録、予約、教育、販売、リマインド、アフター対応まで。ユーザーの行動や属性に応じて分岐するLINEシナリオを設計し、人の手を介さずに\u201C売れる導線\u201Dを自動化します。" },
+  { num: "03", img: "/strength-illust-03.png", ja: "効果測定シートの作成・運用", sub: "LINE内全ての導線を数値化", desc: "すべての施策を数値で検証。LINE内の導線を可視化した効果測定シートを作成し、データに基づいたPDCAを高速回転させます。" },
+  { num: "04", img: "/strength-illust-04.png", ja: "数多くの実績・経験に基づいたデータ", sub: "VOYAGEには圧倒的なノウハウがあります", desc: "200社超の運用データから導き出した『成功の型』を、貴社に合わせてカスタマイズ。業界・業種ごとの豊富な実績と経験に基づき、成果に繋げる圧倒的なノウハウを提供します。" },
 ];
 
 const FLOW_STEPS = [
@@ -536,7 +536,7 @@ const Header = () => {
       <header className={`fixed top-0 w-full z-50 transition-all duration-500 bg-white/95 backdrop-blur-md ${scrolled ? "shadow-[0_1px_0_rgba(0,0,0,.06)]" : ""}`}>
         <div className="max-w-[1200px] mx-auto px-4 md:px-8 h-14 md:h-16 flex items-center justify-between overflow-visible">
           <a href="#" className="relative z-10 flex items-center">
-            <img src="/logo.png" alt="VOYAGE" className="h-[50px] w-auto transition-all duration-500 object-contain" />
+            <img src="/logo.png" alt="VOYAGE" className="h-[30px] md:h-[34px] w-auto transition-all duration-500 object-contain" />
           </a>
           <nav className="hidden lg:flex items-center gap-7">
             {links.map(n => <a key={n.l} href={n.h} className="text-[12px] font-semibold tracking-wide transition-colors text-black/50 hover:text-black">{n.l}</a>)}
@@ -653,10 +653,12 @@ const Hero = () => {
   const bgY = useParallax(heroRef, 0.2);
 
   /* Creative images — displayed as cards in alternating up/down scrolling columns */
-  /* Creative images — 1 to 31, randomized */
+  /* Creative images — 1 to 31, excluding removed ones */
   const cols = useMemo(() => {
-    // Generate array [1..31]
-    const all = Array.from({ length: 31 }, (_, i) => `/creative-${i + 1}.png`);
+    const exclude = [8, 9, 12, 15];
+    const all = Array.from({ length: 31 }, (_, i) => i + 1)
+      .filter(n => !exclude.includes(n))
+      .map(n => `/creative-${n}.png`);
 
     // Fisher-Yates shuffle with multiple passes for better randomness
     for (let k = 0; k < 3; k++) {
@@ -698,14 +700,13 @@ const Hero = () => {
 
 
       <div className="relative z-10 max-w-[1100px] mx-auto px-4 md:px-8 w-full pt-20 pb-8 md:pt-24 md:pb-10">
-        <div className="flex items-center gap-8 lg:gap-12">
-          {/* Left: Text */}
-          <div className="max-w-[660px] flex-1">
+        <div>
+          <div className="max-w-[660px]">
             {/* Main Copy */}
             <div className={show()} style={{ transitionDelay: "400ms" }}>
               <h1 className="leading-none font-display mt-4 md:mt-5">
                 <span className="block font-black tracking-tight text-[#333]">
-                  <span className="inline-block text-[56px] md:text-[90px] lg:text-[100px] text-[#00BFA5] -mb-2 md:-mb-4" style={{ textShadow: "0 2px 12px rgba(0,191,165,.25), 0 0 40px rgba(0,191,165,.10)" }}>LINE</span>
+                  <span className="inline-block text-[56px] md:text-[90px] lg:text-[100px] text-[#00BFA5] text-shimmer -mb-2 md:-mb-4 tracking-tight">LINE</span>
                   <span className="inline-block text-[28px] md:text-[42px] lg:text-[48px] ml-1 md:ml-2">活用で、</span>
                   <br />
                   <span className="inline-block text-[42px] md:text-[72px] lg:text-[84px] bg-clip-text text-transparent bg-gradient-to-r from-[#00BFA5] to-[#2A9D8F] pb-2">事業成長</span>
@@ -718,65 +719,12 @@ const Hero = () => {
             {/* Sub Copy */}
             <div className={show()} style={{ transitionDelay: "600ms" }}>
               <p className="text-black/75 text-[15px] md:text-[18px] leading-[1.8] md:leading-[1.9] mt-6 md:mt-8 max-w-[560px] font-medium">
-                <span className="block text-black font-bold text-[18px] md:text-[22px] mb-2 md:mb-3">採用も、集客も。</span>
                 200アカウント以上のご支援から得た知見で、<br className="hidden md:block" />
                 企業の「採用」と「売上」を最大化するLINEソリューション。
               </p>
             </div>
           </div>
 
-          {/* Right: Logo + Phone mockup (WEINCAREER banner style) */}
-          <div className={`hidden md:flex flex-col items-center gap-6 shrink-0 ${show()}`} style={{ transitionDelay: "800ms" }}>
-            {/* VOYAGE Logo */}
-            <img src="/logo-voyage-color.png" alt="VOYAGE" className="w-[140px] lg:w-[180px] drop-shadow-lg" />
-            {/* Phone Mockup */}
-            <div className="relative" style={{ transform: "rotate(6deg)" }}>
-              <div className="relative bg-[#1a1a1a] rounded-[28px] p-[5px] shadow-[0_20px_60px_rgba(0,0,0,.25)]" style={{ width: "180px" }}>
-                {/* Notch */}
-                <div className="absolute top-[5px] left-1/2 -translate-x-1/2 w-[48px] h-[14px] bg-[#1a1a1a] rounded-b-xl z-10" />
-                {/* Screen */}
-                <div className="relative bg-[#f5f5f5] rounded-[23px] overflow-hidden" style={{ aspectRatio: "9/19.5" }}>
-                  <div className="h-[22px] bg-white" />
-                  {/* LINE header */}
-                  <div className="bg-[#00BFA5] px-3 py-2 flex items-center gap-1.5">
-                    <div className="w-5 h-5 rounded-full bg-white/30" />
-                    <div className="w-16 h-2 bg-white/50 rounded-full" />
-                  </div>
-                  {/* Chat messages */}
-                  <div className="p-3 space-y-3">
-                    <div className="flex gap-1.5">
-                      <div className="w-4 h-4 rounded-full bg-gray-300 shrink-0 mt-0.5" />
-                      <div className="bg-white rounded-xl rounded-tl-sm px-3 py-2 shadow-sm max-w-[80%]">
-                        <div className="w-16 h-1.5 bg-gray-200 rounded-full" />
-                        <div className="w-10 h-1.5 bg-gray-200 rounded-full mt-1.5" />
-                      </div>
-                    </div>
-                    <div className="flex justify-end">
-                      <div className="bg-[#00BFA5]/15 rounded-xl rounded-tr-sm px-3 py-2 max-w-[75%]">
-                        <div className="w-12 h-1.5 bg-[#00BFA5]/30 rounded-full" />
-                      </div>
-                    </div>
-                    <div className="flex gap-1.5">
-                      <div className="w-4 h-4 rounded-full bg-gray-300 shrink-0 mt-0.5" />
-                      <div className="bg-white rounded-xl rounded-tl-sm px-3 py-2 shadow-sm">
-                        <div className="w-20 h-1.5 bg-gray-200 rounded-full" />
-                        <div className="w-14 h-1.5 bg-gray-200 rounded-full mt-1.5" />
-                        <div className="w-8 h-1.5 bg-gray-200 rounded-full mt-1.5" />
-                      </div>
-                    </div>
-                    <div className="flex justify-end">
-                      <div className="bg-[#00BFA5]/15 rounded-xl rounded-tr-sm px-3 py-2 max-w-[70%]">
-                        <div className="w-16 h-1.5 bg-[#00BFA5]/30 rounded-full" />
-                        <div className="w-10 h-1.5 bg-[#00BFA5]/30 rounded-full mt-1.5" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Glow effect behind phone */}
-              <div className="absolute -inset-8 bg-[#00BFA5]/10 rounded-full blur-[40px] -z-10" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -846,33 +794,19 @@ const ClientShowcase = () => {
   );
 
   const ClientCard = ({ c }) => (
-    <div className="shrink-0 w-[300px] md:w-[580px] group relative mx-2 md:mx-4">
-      {/* 基準枠 (基準となるコンテンツ領域) */}
-      <div className="relative w-full h-[200px] md:h-[350px] flex items-center justify-center">
-        {/* 背景の横長バナー - 水平・垂直ともに完全センター */}
-        <div className="relative w-[220px] md:w-[460px] h-[125px] md:h-[260px] rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,.10)] transition-all duration-500 z-0">
-          {c.logo ? (
-            <div className="w-full h-full overflow-hidden bg-white flex items-center justify-center">
-              <img src={c.logo} alt={c.name} className={`w-full h-full ${c.fill ? "object-cover" : "object-contain"} group-hover:scale-105 transition-transform duration-500`} style={c.scale ? { transform: `scale(${c.scale})` } : undefined} />
-            </div>
-          ) : (
-            <div className="w-full h-full flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${c.accent}, ${c.accent}cc)` }}>
-              <span className="text-white font-black font-en text-[18px] md:text-[28px] tracking-wide text-center px-6">{c.name}</span>
-            </div>
-          )}
-        </div>
-
-        {/* スマホモックアップ - 基準枠の縦中央に揃え、バナーとの重なりを絶妙に調整 */}
-        <div className="absolute -right-[3%] md:-right-[4%] top-1/2 -translate-y-1/2 z-10 transition-transform duration-500 group-hover:-translate-y-[calc(50%+6px)]">
-          {/* 自然な見栄えのためにごくわずかな回転（1度）を加える */}
-          <div className="rotate-[1deg]">
-            {c.isMockupImage ? (
-              <img src={c.screenImage} alt={`${c.name} Mockup`} className="w-[85px] md:w-[130px] h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,.3)]" />
-            ) : (
-              <PhoneMockup c={c} />
-            )}
+    <div className="shrink-0 w-[280px] md:w-[480px] group relative mx-2 md:mx-4">
+      {/* バナー背景 — フル幅 */}
+      <div className="relative w-full h-[160px] md:h-[280px] rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,.10)] transition-all duration-500">
+        {c.logo ? (
+          <div className="w-full h-full overflow-hidden bg-white flex items-center justify-center">
+            <img src={c.logo} alt={c.name} className={`w-full h-full ${c.fill ? "object-cover" : "object-contain"} group-hover:scale-105 transition-transform duration-500`} style={c.scale ? { transform: `scale(${c.scale})` } : undefined} />
           </div>
-        </div>
+        ) : (
+          <div className="w-full h-full flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${c.accent}, ${c.accent}cc)` }}>
+            <span className="text-white font-black font-en text-[18px] md:text-[28px] tracking-wide text-center px-6">{c.name}</span>
+          </div>
+        )}
+
       </div>
     </div>
   );
@@ -986,25 +920,25 @@ const PainPoints = () => {
                 );
               })}
 
-              {/* 自分の返答（VOYAGE） */}
-              <div className="flex justify-end items-end gap-2 mt-4">
-                <div className="flex flex-col items-end gap-0.5 mb-1 shrink-0">
-                  <span className="text-[10px] md:text-[12px] text-[#00BFA5] font-black">既読</span>
-                  <span className="text-[10px] md:text-[12px] text-black/50 font-bold">14:22</span>
-                </div>
-                <PopIn delay={PAINS.length * 200 + 800} className="scale-[1.1] md:scale-110 origin-right">
-                  <div className="relative bg-[#00BFA5] rounded-[22px] rounded-tr-md px-5 py-4 md:px-6 md:py-5 shadow-[0_12px_44px_rgba(0,191,165,.45)] w-fit max-w-none border-2 border-white/30 animate-pulse-glow">
-                    {/* 吹き出しの尾 */}
-                    <div className="absolute -right-[8px] top-[14px] w-0 h-0" style={{ borderTop: "8px solid transparent", borderBottom: "8px solid transparent", borderLeft: "10px solid #00BFA5" }} />
-                    <p className="text-[16px] md:text-[19px] font-black text-white leading-[1.5] tracking-tight drop-shadow-sm">
-                      そのお悩み、<br />
-                      <span className="text-[18px] md:text-[23px] text-white underline decoration-white/40 decoration-[6px] underline-offset-8 whitespace-nowrap">VOYAGEがLINEで解決します💪</span>
-                    </p>
-                  </div>
-                </PopIn>
+            </div>
+
+            {/* 入力バー */}
+            <div className="bg-[#efefef] px-3 py-2 md:py-2.5 flex items-center gap-2">
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#54B8AB] flex items-center justify-center shrink-0">
+                <span className="text-white font-bold text-[14px] md:text-[16px]">+</span>
+              </div>
+              <div className="flex-1 bg-white rounded-full px-3 py-1.5 md:py-2">
+                <span className="text-[11px] md:text-[12px] text-black/25">メッセージを入力</span>
+              </div>
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#54B8AB] flex items-center justify-center shrink-0">
+                <Send size={13} className="text-white" />
               </div>
             </div>
 
+            {/* ホームバー */}
+            <div className="flex justify-center py-1.5 bg-[#1a1a1a]">
+              <div className="w-[100px] md:w-[120px] h-[4px] bg-white/30 rounded-full" />
+            </div>
           </div>
         </Reveal>
       </div >
@@ -1242,13 +1176,13 @@ const BackstageGroup = () => {
           {/* 上下にグラデーション — YouTubeSection/Leadershipの背景色に合わせる */}
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{ background: "linear-gradient(to bottom, rgba(232,245,233,1) 0%, rgba(232,245,233,.5) 10%, transparent 22%, transparent 68%, rgba(232,245,233,.6) 80%, rgba(232,245,233,1) 88%)" }}
+            style={{ background: "linear-gradient(to bottom, rgba(232,245,233,1) 0%, rgba(232,245,233,.5) 10%, transparent 22%, transparent 68%, rgba(255,255,255,.6) 80%, rgba(255,255,255,1) 88%)" }}
           />
 
           {/* 実績オーバーレイ — 中央配置 */}
           <div className="absolute inset-0 flex items-center justify-center p-4">
             <Reveal>
-              <div className="bg-white/70 backdrop-blur-md rounded-[32px] md:rounded-[48px] px-6 py-10 md:px-20 md:py-16 text-center shadow-[0_24px_80px_rgba(0,0,0,0.15)] border border-white/50 w-fit max-w-[95%] md:max-w-[1000px]">
+              <div className="bg-white rounded-[32px] md:rounded-[48px] px-6 py-10 md:px-20 md:py-16 text-center shadow-[0_24px_80px_rgba(0,0,0,0.15)] border border-black/[.06] w-fit max-w-[95%] md:max-w-[1000px]">
                 <h2 className="text-[20px] md:text-[40px] font-black text-black mb-6 md:mb-10 leading-[1.3] tracking-tight">
                   国内NO.1の影響力をもつ<br />
                   <span className="md:whitespace-nowrap"><span className="text-[#00BFA5]">BACKSTAGE Group</span>の採用・マーケを担当</span>
@@ -1276,28 +1210,27 @@ const BackstageGroup = () => {
    ═══════════════════════════════════════════════════════════ */
 const LEADERS = [
   { img: "/ceo-chiba-v3.png", name: "千葉 瑛太", title: "代表取締役", desc: "累計200社以上の支援実績を持ち、年間数億円規模のマーケティング予算を統括。グループの事業成長を採用支援の側面から牽引。" },
-  { img: "/ceo-mizoguchi-v3.png", name: "溝口 勇児", title: "監修 / 共同代表", desc: "BACKSTAGE Inc. 代表取締役。FiNC創業者。累計180億円超の資金調達を実現。" },
+  { img: "/ceo-mizoguchi-v3.png", name: "溝口 勇児", title: "監修 / 共同代表", desc: "BACKSTAGE Inc. 代表取締役。FiNC創業者。累計180億円超の資金調達を実現。", imgScale: 1.3 },
 ];
 
 const Leadership = () => (
   <section className="relative bg-white py-14 md:py-20 overflow-hidden">
-    <div className="absolute inset-0 circle-ring-pattern pointer-events-none" />
-    <div className="absolute top-[10%] left-[-5%] w-[25%] aspect-square rounded-full bg-[#00BFA5]/[.03] pointer-events-none animate-drift-y" />
-    <div className="relative z-10 max-w-[960px] mx-auto px-4 md:px-8">
+    <div className="absolute top-[10%] left-[-5%] w-[25%] aspect-square rounded-full bg-[#00BFA5]/[.03] pointer-events-none" />
+    <div className="relative z-10 max-w-[900px] mx-auto px-4 md:px-8">
       <Reveal>
         <SectionHead>経営陣</SectionHead>
       </Reveal>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="space-y-10 md:space-y-14">
         {LEADERS.map((l, i) => (
           <Reveal key={i} delay={i * 120}>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,.06)] hover:shadow-[0_8px_32px_rgba(0,191,165,.10)] hover:-translate-y-1 transition-all duration-300">
-              <div className="w-full aspect-[4/3] overflow-hidden">
-                <img src={l.img} alt={l.name} className="w-full h-full object-cover" style={{ objectPosition: "center 15%" }} loading="lazy" />
+            <div className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-5 md:gap-10`}>
+              <div className="w-[140px] h-[140px] md:w-[200px] md:h-[200px] shrink-0 rounded-full overflow-hidden ring-4 ring-[#00BFA5]/10">
+                <img src={l.img} alt={l.name} className="w-full h-full object-cover" style={{ objectPosition: "center 15%", transform: l.imgScale ? `scale(${l.imgScale})` : undefined }} loading="lazy" />
               </div>
-              <div className="p-5 md:p-6">
-                <p className="text-[10px] md:text-[11px] text-[#00BFA5] font-bold tracking-widest uppercase mb-1">{l.title}</p>
-                <h3 className="text-[20px] md:text-[24px] font-bold text-black/90 mb-3 tracking-tight">{l.name}</h3>
-                <p className="text-[13px] md:text-[14px] text-black/60 leading-[1.8]">{l.desc}</p>
+              <div className={`flex-1 min-w-0 text-center ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
+                <p className="text-[11px] md:text-[12px] text-[#00BFA5] font-bold tracking-widest uppercase mb-1">{l.title}</p>
+                <h3 className="text-[22px] md:text-[28px] font-bold text-black/90 mb-3 tracking-tight">{l.name}</h3>
+                <p className="text-[13px] md:text-[15px] text-black/50 leading-[1.85] md:leading-[1.9]">{l.desc}</p>
               </div>
             </div>
           </Reveal>
@@ -1315,9 +1248,9 @@ const SERVICE_BANNERS = [
     logo: "/logo-riquel.png",
     logoAlt: "リクエル",
     logoH: "h-[44px] md:h-[64px]",
-    tag: "採用DXソリューション",
-    headline: <>LINE×採用で<br className="md:hidden" />歩留まりを劇的改善</>,
-    desc: "エントリーから内定承諾までをLINEで自動化・最適化。面談予約率を最大6倍に。",
+    tag: "",
+    headline: <>LINE×採用で<br />歩留まりを劇的改善</>,
+    desc: "エントリーから内定承諾までをLINEで自動化・最適化。\n面談予約率を最大6倍に改善した実績あり。",
     accent: "#00BFA5",
     bgFrom: "#00BFA5",
     bgTo: "#0CADA8",
@@ -1328,9 +1261,9 @@ const SERVICE_BANNERS = [
     logo: "/logo-lacademia.png",
     logoAlt: "L-ACADEMIA",
     logoH: "h-[44px] md:h-[64px]",
-    tag: "実践型LINEマーケティングスクール",
-    headline: <>200社超のノウハウを<br className="md:hidden" />実践型カリキュラムで習得</>,
-    desc: "現役プロ講師の伴走支援で、未経験からでもプロレベルのLINEマーケスキルが身につく。",
+    tag: "",
+    headline: <>200社超のノウハウを<br className="md:hidden" />習得</>,
+    desc: "未経験からプロレベルのLINEマーケスキルを習得。",
     accent: "#0CADA8",
     bgFrom: "#0CADA8",
     bgTo: "#38BCD8",
@@ -1344,50 +1277,47 @@ const Service = () => (
     <div className="absolute inset-0 circle-ring-pattern pointer-events-none" />
     <div className="absolute top-[10%] left-[-5%] w-[25%] aspect-square rounded-full bg-[#00BFA5]/[.03] pointer-events-none animate-drift-y" />
     <div className="absolute bottom-[5%] right-[-6%] w-[20%] aspect-square rounded-full bg-[#00BFA5]/[.04] pointer-events-none animate-drift-x" />
-    <div className="max-w-[900px] mx-auto px-4 md:px-8 relative z-10">
+    <div className="max-w-[1100px] mx-auto px-4 md:px-6 relative z-10">
       <Reveal>
         <SectionHead>サービス内容</SectionHead>
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <div className="space-y-5 md:space-y-6">
         {SERVICE_BANNERS.map((s, i) => (
           <Reveal key={i} delay={i * 120}>
             <a
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,.15)] hover:-translate-y-1 transition-all duration-400 h-full"
+              className="group block relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,.15)] hover:-translate-y-1 transition-all duration-400"
             >
               {/* Background */}
-              <div className="relative px-6 py-7 md:px-8 md:py-10 min-h-[220px] md:min-h-[280px] flex flex-col justify-center h-full" style={{ background: `linear-gradient(135deg, ${s.bgFrom}, ${s.bgTo})` }}>
+              <div className="relative px-6 py-7 md:px-10 md:py-10 h-[200px] md:h-[220px] flex flex-col justify-center" style={{ background: `linear-gradient(135deg, ${s.bgFrom}, ${s.bgTo})` }}>
                 {/* Diagonal stripes */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.08]">
-                  {[...Array(12)].map((_, j) => (
+                  {[...Array(16)].map((_, j) => (
                     <div key={j} className="absolute h-[200%] w-[30px] md:w-[50px] bg-white -rotate-[25deg]" style={{ left: `${j * 80 - 40}px`, top: "-50%" }} />
                   ))}
                 </div>
 
-                {/* Content */}
-                <div className="relative z-10 flex flex-col gap-5">
-                  {/* Logo */}
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white rounded-xl px-5 py-3 shadow-[0_4px_16px_rgba(0,0,0,.1)]">
-                      <img src={s.logo} alt={s.logoAlt} className={`${s.logoH} w-auto object-contain`} loading="lazy" />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div>
-                    <span className="inline-block text-[10px] md:text-[11px] font-bold text-white/70 tracking-wider mb-2">{s.tag}</span>
-                    <h3 className="text-[18px] md:text-[22px] font-black text-white leading-[1.4] mb-2">
+                {/* Content — horizontal layout */}
+                <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+                  {/* Left: Text */}
+                  <div className="flex-1 min-w-0">
+                    {s.tag && <span className="inline-block text-[10px] md:text-[11px] font-bold text-white/70 tracking-wider mb-2 md:mb-3">{s.tag}</span>}
+                    <h3 className="text-[20px] md:text-[28px] font-black text-white leading-[1.4] md:leading-[1.45] mb-2 md:mb-3">
                       {s.headline}
                     </h3>
-                    <p className="text-[12px] md:text-[13px] text-white/70 leading-[1.7]">{s.desc}</p>
+                    <p className="text-[12px] md:text-[14px] text-white/70 leading-[1.7] max-w-[480px] whitespace-pre-line">{s.desc}</p>
                   </div>
-                  {/* Arrow */}
-                  <div className="flex items-center gap-2 mt-auto">
-                    <span className="text-[12px] font-bold text-white/80">詳しく見る</span>
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
-                      <ArrowRight size={16} className="text-white group-hover:translate-x-0.5 transition-transform duration-300" />
+
+                  {/* Right: Logo + Arrow */}
+                  <div className="flex items-center gap-4 md:gap-6 shrink-0">
+                    <div className="bg-white rounded-xl px-5 py-3 md:px-6 md:py-4 shadow-[0_4px_16px_rgba(0,0,0,.1)]">
+                      <img src={s.logo} alt={s.logoAlt} className={`${s.logoH} w-auto object-contain`} loading="lazy" />
+                    </div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
+                      <ArrowRight size={20} className="text-white group-hover:translate-x-0.5 transition-transform duration-300" />
                     </div>
                   </div>
                 </div>
@@ -1449,12 +1379,9 @@ const Achievements = () => (
     <WaveSvg fill="#e0f5f2" />
     <div className="max-w-[1100px] mx-auto px-4 md:px-6 relative z-10">
       <Reveal>
-        <div className="flex flex-col items-center mb-8">
-          <img src="/badge-200.png" alt="運用実績200社以上" className="h-[80px] md:h-[110px] lg:h-[130px] w-auto drop-shadow-[0_4px_16px_rgba(0,0,0,.10)] mb-4" loading="lazy" />
-          <h2 className="text-[24px] md:text-[30px] font-bold text-black/70 tracking-[0.06em] text-center">
-            成果事例
-          </h2>
-        </div>
+        <h2 className="text-[24px] md:text-[30px] font-bold text-black/70 tracking-[0.06em] text-center mb-8">
+          成果事例
+        </h2>
       </Reveal>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-8 md:items-stretch">
         {CASES.map((c, i) => (
@@ -1485,31 +1412,6 @@ const Achievements = () => (
         ))}
       </div>
 
-      <ScrollLine />
-      <p className="text-[18px] md:text-[22px] font-bold text-black/70 mb-6 text-center tracking-wide">お客様の声</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-        {VOICES.map((v, i) => (
-          <PopIn key={i} delay={i * 80}>
-            <div className="h-full">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full shrink-0 ring-1 ring-black/[0.06] overflow-hidden">
-                  <img src={v.avatar} alt="" className="w-[120%] h-[120%] object-cover -ml-[10%] -mt-[10%]" />
-                </div>
-                <p className="text-[12px] font-semibold text-black/60 leading-tight">{v.role}</p>
-              </div>
-              <div className="relative bg-white rounded-lg rounded-tl-md p-4 shadow-[0_1px_8px_rgba(0,0,0,.04)] ml-4 border border-black/[0.03]">
-                <div className="absolute -top-1.5 left-5 w-0 h-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-white" />
-                <p className="text-[12px] text-black/60 leading-[1.8] mb-3">{v.quote}</p>
-                <div className="flex items-center gap-1.5 mb-1.5">
-                  <CheckCircle2 size={12} className="text-[#00BFA5]" />
-                  <span className="text-[10px] font-semibold text-[#00BFA5]/80">導入後の成果</span>
-                </div>
-                <p className="text-[11px] text-black/50 leading-[1.7]">{v.result}</p>
-              </div>
-            </div>
-          </PopIn>
-        ))}
-      </div>
     </div>
   </section>
 );
@@ -1529,11 +1431,17 @@ const Strength = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {STRENGTHS.map((s, i) => (
           <Reveal key={i} delay={i * 100}>
-            <div className="h-full bg-gradient-to-br from-white to-gray-50/80 rounded-2xl border border-black/[.06] p-6 md:p-8 hover:shadow-[0_8px_32px_rgba(0,191,165,.10)] hover:-translate-y-1 transition-all duration-300 group">
+            <div className="h-full p-6 md:p-8 hover:-translate-y-1 transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-[32px] md:text-[40px] font-black text-[#00BFA5]/20 font-en leading-none">{s.num}</span>
                 <div className="h-[2px] flex-1 bg-gradient-to-r from-[#00BFA5]/30 to-transparent" />
               </div>
+              {s.img && (
+                <div className="relative w-full h-[140px] md:h-[160px] flex items-center justify-center mb-4 -mt-1">
+                  <img src={s.img} alt={s.ja} className="h-full w-auto object-contain" loading="lazy" />
+                  <div className="absolute inset-0 pointer-events-none" style={{ boxShadow: "inset 0 0 30px 20px white" }} />
+                </div>
+              )}
               <h3 className="text-[17px] md:text-[20px] font-black text-black/90 mb-2 leading-snug">{s.ja}</h3>
               <p className="text-[12px] md:text-[13px] font-bold text-[#00BFA5] mb-4">{s.sub}</p>
               <p className="text-[13px] md:text-[14px] text-black/50 leading-[1.85]">{s.desc}</p>
@@ -1549,7 +1457,7 @@ const Strength = () => (
    FLOW — light green bg
    ═══════════════════════════════════════════════════════════ */
 const Flow = () => (
-  <section className="relative bg-[#e0f5f2] pt-14 pb-16 md:pt-16 md:pb-20 overflow-hidden">
+  <section className="relative bg-[#e0f5f2] pt-8 pb-16 md:pt-10 md:pb-20 overflow-hidden">
     <div className="absolute inset-0 diagonal-pattern pointer-events-none" />
     <WaveSvg fill="#e0f5f2" />
     <div className="absolute top-[10%] right-[-4%] w-[120px] md:w-[200px] aspect-square rounded-full bg-[#00BFA5]/[.06] blur-[40px] pointer-events-none animate-drift-y" />
