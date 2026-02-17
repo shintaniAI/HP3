@@ -88,8 +88,10 @@ const PersonAvatar = ({ color, gender, size = 56 }) => (
 );
 
 const STRENGTHS = [
-  { img: "/strength-strategy.png", ja: "戦略的バックアップ", desc: "大型IP運営を含む200社超の運用データから導き出した『成功の型』を、貴社に合わせてカスタマイズ。" },
-  { img: "/strength-data.png", ja: "データドリブン運用", desc: "すべての施策を数値で検証。200社超のデータベースから最適パターンを提案しPDCAを高速回転。" },
+  { num: "01", ja: "圧倒的結果にコミット", sub: "伴走型支援で、KPI改善に責任を持ちます", desc: "ただの\u201C代行業者\u201Dではなく、圧倒的当事者意識で数字に向き合います。売上・予約数・CVなど、目標達成から逆算したLINE戦略を立案。改善のたびに報告・提案を行い、共に成果を追いかけ続けます。" },
+  { num: "02", ja: "オーダーメイドの自動化シナリオ設計", sub: "業種・サービスに最適な導線設計で成果を最大化", desc: "LINE登録、予約、教育、販売、リマインド、アフター対応まで。ユーザーの行動や属性に応じて分岐するLINEシナリオを設計し、人の手を介さずに\u201C売れる導線\u201Dを自動化します。" },
+  { num: "03", ja: "効果測定シートの作成・運用", sub: "LINE内全ての導線を数値化", desc: "すべての施策を数値で検証。LINE内の導線を可視化した効果測定シートを作成し、データに基づいたPDCAを高速回転させます。" },
+  { num: "04", ja: "数多くの実績・経験に基づいたデータ", sub: "VOYAGEには圧倒的なノウハウがあります", desc: "200社超の運用データから導き出した『成功の型』を、貴社に合わせてカスタマイズ。業界・業種ごとの豊富な実績と経験に基づき、成果に繋げる圧倒的なノウハウを提供します。" },
 ];
 
 const FLOW_STEPS = [
@@ -694,37 +696,85 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent to-white/40" />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white via-transparent to-white" />
 
-      {/* Badge - 右上に配置 */}
-      {/* Badge - 右上に配置 - ヘッダー被り回避のため top-20 (80px) / md:top-24 (96px) に変更 */}
-      <img src="/badge-200.png" alt="運用実績200社以上" className="absolute z-20 top-20 right-4 md:top-24 md:right-8 h-[64px] md:h-[100px] lg:h-[120px] w-auto drop-shadow-[0_4px_16px_rgba(0,0,0,.12)] animate-[float_3s_ease-in-out_infinite]" loading="lazy" style={{ animation: "float 3s ease-in-out infinite" }} />
 
       <div className="relative z-10 max-w-[1100px] mx-auto px-4 md:px-8 w-full pt-20 pb-8 md:pt-24 md:pb-10">
-        <div className="max-w-[660px]">
-          {/* Main Copy */}
-          <div className={show()} style={{ transitionDelay: "400ms" }}>
-            <h1 className="leading-none font-display mt-4 md:mt-5">
-              <span className="block font-black tracking-tight text-[#333]">
-                <span className="inline-block text-[56px] md:text-[90px] lg:text-[100px] text-[#00BFA5] -mb-2 md:-mb-4">LINE</span>
-                <span className="inline-block text-[28px] md:text-[42px] lg:text-[48px] ml-1 md:ml-2">活用で、</span>
-                <br />
-                <span className="inline-block text-[42px] md:text-[72px] lg:text-[84px] bg-clip-text text-transparent bg-gradient-to-r from-[#00BFA5] to-[#2A9D8F] pb-2">事業成長</span>
-                <span className="inline-block text-[28px] md:text-[42px] lg:text-[48px] ml-1 md:ml-2">を</span>
-                <br className="hidden md:block" />
-                <span className="inline-block text-[42px] md:text-[72px] lg:text-[84px]">加速させる。</span>
-              </span>
-            </h1>
+        <div className="flex items-center gap-8 lg:gap-12">
+          {/* Left: Text */}
+          <div className="max-w-[660px] flex-1">
+            {/* Main Copy */}
+            <div className={show()} style={{ transitionDelay: "400ms" }}>
+              <h1 className="leading-none font-display mt-4 md:mt-5">
+                <span className="block font-black tracking-tight text-[#333]">
+                  <span className="inline-block text-[56px] md:text-[90px] lg:text-[100px] text-[#00BFA5] -mb-2 md:-mb-4" style={{ textShadow: "0 2px 12px rgba(0,191,165,.25), 0 0 40px rgba(0,191,165,.10)" }}>LINE</span>
+                  <span className="inline-block text-[28px] md:text-[42px] lg:text-[48px] ml-1 md:ml-2">活用で、</span>
+                  <br />
+                  <span className="inline-block text-[42px] md:text-[72px] lg:text-[84px] bg-clip-text text-transparent bg-gradient-to-r from-[#00BFA5] to-[#2A9D8F] pb-2">事業成長</span>
+                  <span className="inline-block text-[28px] md:text-[42px] lg:text-[48px] ml-1 md:ml-2">を</span>
+                  <br className="hidden md:block" />
+                  <span className="inline-block text-[42px] md:text-[72px] lg:text-[84px]">加速させる。</span>
+                </span>
+              </h1>
+            </div>
+            {/* Sub Copy */}
+            <div className={show()} style={{ transitionDelay: "600ms" }}>
+              <p className="text-black/75 text-[15px] md:text-[18px] leading-[1.8] md:leading-[1.9] mt-6 md:mt-8 max-w-[560px] font-medium">
+                <span className="block text-black font-bold text-[18px] md:text-[22px] mb-2 md:mb-3">採用も、集客も。</span>
+                200アカウント以上のご支援から得た知見で、<br className="hidden md:block" />
+                企業の「採用」と「売上」を最大化するLINEソリューション。
+              </p>
+            </div>
           </div>
-          {/* Sub Copy */}
-          <div className={show()} style={{ transitionDelay: "600ms" }}>
-            <p className="text-black/75 text-[15px] md:text-[18px] leading-[1.8] md:leading-[1.9] mt-6 md:mt-8 max-w-[560px] font-medium">
-              <span className="block text-black font-bold text-[18px] md:text-[22px] mb-2 md:mb-3">採用も、集客も。</span>
-              200アカウント以上のご支援から得た知見で、<br className="hidden md:block" />
-              企業の「採用」と「売上」を最大化するLINEソリューション。
-            </p>
-          </div>
-          <div className={show()} style={{ transitionDelay: "800ms" }}>
-            <div className="mt-8 md:mt-10 flex items-center gap-4 md:gap-5 flex-wrap">
-              <MagneticWrap className="inline-block" strength={0.15}><LineBtn large>ご相談・お問合せ（無料）</LineBtn></MagneticWrap>
+
+          {/* Right: Logo + Phone mockup (WEINCAREER banner style) */}
+          <div className={`hidden md:flex flex-col items-center gap-6 shrink-0 ${show()}`} style={{ transitionDelay: "800ms" }}>
+            {/* VOYAGE Logo */}
+            <img src="/logo-voyage-color.png" alt="VOYAGE" className="w-[140px] lg:w-[180px] drop-shadow-lg" />
+            {/* Phone Mockup */}
+            <div className="relative" style={{ transform: "rotate(6deg)" }}>
+              <div className="relative bg-[#1a1a1a] rounded-[28px] p-[5px] shadow-[0_20px_60px_rgba(0,0,0,.25)]" style={{ width: "180px" }}>
+                {/* Notch */}
+                <div className="absolute top-[5px] left-1/2 -translate-x-1/2 w-[48px] h-[14px] bg-[#1a1a1a] rounded-b-xl z-10" />
+                {/* Screen */}
+                <div className="relative bg-[#f5f5f5] rounded-[23px] overflow-hidden" style={{ aspectRatio: "9/19.5" }}>
+                  <div className="h-[22px] bg-white" />
+                  {/* LINE header */}
+                  <div className="bg-[#00BFA5] px-3 py-2 flex items-center gap-1.5">
+                    <div className="w-5 h-5 rounded-full bg-white/30" />
+                    <div className="w-16 h-2 bg-white/50 rounded-full" />
+                  </div>
+                  {/* Chat messages */}
+                  <div className="p-3 space-y-3">
+                    <div className="flex gap-1.5">
+                      <div className="w-4 h-4 rounded-full bg-gray-300 shrink-0 mt-0.5" />
+                      <div className="bg-white rounded-xl rounded-tl-sm px-3 py-2 shadow-sm max-w-[80%]">
+                        <div className="w-16 h-1.5 bg-gray-200 rounded-full" />
+                        <div className="w-10 h-1.5 bg-gray-200 rounded-full mt-1.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-end">
+                      <div className="bg-[#00BFA5]/15 rounded-xl rounded-tr-sm px-3 py-2 max-w-[75%]">
+                        <div className="w-12 h-1.5 bg-[#00BFA5]/30 rounded-full" />
+                      </div>
+                    </div>
+                    <div className="flex gap-1.5">
+                      <div className="w-4 h-4 rounded-full bg-gray-300 shrink-0 mt-0.5" />
+                      <div className="bg-white rounded-xl rounded-tl-sm px-3 py-2 shadow-sm">
+                        <div className="w-20 h-1.5 bg-gray-200 rounded-full" />
+                        <div className="w-14 h-1.5 bg-gray-200 rounded-full mt-1.5" />
+                        <div className="w-8 h-1.5 bg-gray-200 rounded-full mt-1.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-end">
+                      <div className="bg-[#00BFA5]/15 rounded-xl rounded-tr-sm px-3 py-2 max-w-[70%]">
+                        <div className="w-16 h-1.5 bg-[#00BFA5]/30 rounded-full" />
+                        <div className="w-10 h-1.5 bg-[#00BFA5]/30 rounded-full mt-1.5" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Glow effect behind phone */}
+              <div className="absolute -inset-8 bg-[#00BFA5]/10 rounded-full blur-[40px] -z-10" />
             </div>
           </div>
         </div>
@@ -823,10 +873,6 @@ const ClientShowcase = () => {
             )}
           </div>
         </div>
-      </div>
-      {/* 会社名ラベル - 基準枠の下に配置 */}
-      <div className="mt-2 text-center overflow-hidden">
-        <p className="text-[11px] md:text-[13px] font-bold text-gray-500 tracking-wide truncate px-4">{c.name}</p>
       </div>
     </div>
   );
@@ -959,20 +1005,6 @@ const PainPoints = () => {
               </div>
             </div>
 
-            {/* 入力バー */}
-            <div className="bg-[#efefef] px-3 py-2 md:py-2.5 flex items-center gap-2">
-              <div className="flex-1 bg-white rounded-full px-3 py-1.5 md:py-2">
-                <span className="text-[11px] md:text-[12px] text-black/25">メッセージを入力</span>
-              </div>
-              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#00BFA5] flex items-center justify-center">
-                <ArrowRight size={14} className="text-white -rotate-90" />
-              </div>
-            </div>
-
-            {/* ホームバー */}
-            <div className="flex justify-center py-1.5 bg-[#1a1a1a]">
-              <div className="w-[100px] md:w-[120px] h-[4px] bg-white/30 rounded-full" />
-            </div>
           </div>
         </Reveal>
       </div >
@@ -1163,13 +1195,13 @@ const YOUTUBE_VIDEOS = [
 
 const YouTubeSection = () => (
   <section className="relative bg-[#e0f5f2] pt-6 pb-14 md:pt-8 md:pb-16 overflow-hidden">
-    <div className="max-w-[800px] mx-auto px-5 md:px-8 relative z-10">
+    <div className="max-w-[1100px] mx-auto px-5 md:px-8 relative z-10">
       <Reveal>
         <div className="text-center mb-6">
           <span className="text-[20px] md:text-[28px] font-black text-[#00BFA5] tracking-wider font-en mb-3 inline-block">MEDIA</span>
         </div>
       </Reveal>
-      <div className="space-y-8 md:space-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {YOUTUBE_VIDEOS.map((v, i) => (
           <Reveal key={v.id} delay={i * 120}>
             <div>
@@ -1248,36 +1280,28 @@ const LEADERS = [
 ];
 
 const Leadership = () => (
-  <section className="relative bg-[#e0f5f2] pt-16 pb-14 md:pt-24 md:pb-20 overflow-hidden">
-    {/* 上部の区切り線 */}
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-[600px] h-px bg-black/10" />
+  <section className="relative bg-white py-14 md:py-20 overflow-hidden">
+    <div className="absolute inset-0 circle-ring-pattern pointer-events-none" />
+    <div className="absolute top-[10%] left-[-5%] w-[25%] aspect-square rounded-full bg-[#00BFA5]/[.03] pointer-events-none animate-drift-y" />
     <div className="relative z-10 max-w-[960px] mx-auto px-4 md:px-8">
       <Reveal>
-        <h2 className="text-[16px] md:text-[22px] font-semibold text-black/70 tracking-[0.08em] mb-6 md:mb-10">
-          経営陣
-        </h2>
+        <SectionHead>経営陣</SectionHead>
       </Reveal>
-      <div
-        className="overflow-x-auto overflow-y-hidden -mx-4 md:-mx-8 px-4 md:px-8 pb-2 scrollbar-hide snap-x snap-mandatory"
-        style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
-      >
-        <div className="flex gap-4 md:gap-8 min-w-max">
-          {LEADERS.map((l, i) => (
-            <div
-              key={i}
-              className="flex flex-col md:flex-row gap-4 md:gap-8 shrink-0 w-[80vw] md:w-[420px] snap-start snap-always"
-            >
-              <div className="w-full md:w-[200px] shrink-0 aspect-[4/3] md:aspect-auto md:h-[240px] overflow-hidden rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+        {LEADERS.map((l, i) => (
+          <Reveal key={i} delay={i * 120}>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,.06)] hover:shadow-[0_8px_32px_rgba(0,191,165,.10)] hover:-translate-y-1 transition-all duration-300">
+              <div className="w-full aspect-[4/3] overflow-hidden">
                 <img src={l.img} alt={l.name} className="w-full h-full object-cover" style={{ objectPosition: "center 15%" }} loading="lazy" />
               </div>
-              <div className="flex-1 min-w-0 flex flex-col justify-center">
-                <h3 className="text-[20px] md:text-[26px] font-bold text-black/90 mb-1 tracking-tight">{l.name}</h3>
-                <p className="text-[11px] md:text-[12px] text-black/40 font-medium tracking-widest uppercase mb-3 md:mb-4">{l.title}</p>
-                <p className="text-[13px] md:text-[15px] text-black/60 leading-[1.8] md:leading-[1.85] tracking-[0.02em]">{l.desc}</p>
+              <div className="p-5 md:p-6">
+                <p className="text-[10px] md:text-[11px] text-[#00BFA5] font-bold tracking-widest uppercase mb-1">{l.title}</p>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-black/90 mb-3 tracking-tight">{l.name}</h3>
+                <p className="text-[13px] md:text-[14px] text-black/60 leading-[1.8]">{l.desc}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </Reveal>
+        ))}
       </div>
     </div>
   </section>
@@ -1325,17 +1349,17 @@ const Service = () => (
         <SectionHead>サービス内容</SectionHead>
       </Reveal>
 
-      <div className="space-y-5 md:space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {SERVICE_BANNERS.map((s, i) => (
           <Reveal key={i} delay={i * 120}>
             <a
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,.15)] hover:-translate-y-1 transition-all duration-400"
+              className="group block relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,.15)] hover:-translate-y-1 transition-all duration-400 h-full"
             >
               {/* Background */}
-              <div className="relative px-6 py-7 md:px-10 md:py-10 min-h-[160px] md:min-h-[200px] flex flex-col justify-center" style={{ background: `linear-gradient(135deg, ${s.bgFrom}, ${s.bgTo})` }}>
+              <div className="relative px-6 py-7 md:px-8 md:py-10 min-h-[220px] md:min-h-[280px] flex flex-col justify-center h-full" style={{ background: `linear-gradient(135deg, ${s.bgFrom}, ${s.bgTo})` }}>
                 {/* Diagonal stripes */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.08]">
                   {[...Array(12)].map((_, j) => (
@@ -1344,23 +1368,26 @@ const Service = () => (
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
-                  {/* Left: Text */}
-                  <div className="flex-1 min-w-0">
-                    <span className="inline-block text-[10px] md:text-[11px] font-bold text-white/70 tracking-wider mb-2 md:mb-3">{s.tag}</span>
-                    <h3 className="text-[20px] md:text-[28px] font-black text-white leading-[1.4] md:leading-[1.45] mb-2 md:mb-3">
-                      {s.headline}
-                    </h3>
-                    <p className="text-[12px] md:text-[14px] text-white/70 leading-[1.7] max-w-[480px]">{s.desc}</p>
-                  </div>
-
-                  {/* Right: Logo + Arrow */}
-                  <div className="flex items-center gap-4 md:gap-6 shrink-0">
-                    <div className="bg-white rounded-xl px-5 py-3 md:px-6 md:py-4 shadow-[0_4px_16px_rgba(0,0,0,.1)]">
+                <div className="relative z-10 flex flex-col gap-5">
+                  {/* Logo */}
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white rounded-xl px-5 py-3 shadow-[0_4px_16px_rgba(0,0,0,.1)]">
                       <img src={s.logo} alt={s.logoAlt} className={`${s.logoH} w-auto object-contain`} loading="lazy" />
                     </div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
-                      <ArrowRight size={20} className="text-white group-hover:translate-x-0.5 transition-transform duration-300" />
+                  </div>
+                  {/* Text */}
+                  <div>
+                    <span className="inline-block text-[10px] md:text-[11px] font-bold text-white/70 tracking-wider mb-2">{s.tag}</span>
+                    <h3 className="text-[18px] md:text-[22px] font-black text-white leading-[1.4] mb-2">
+                      {s.headline}
+                    </h3>
+                    <p className="text-[12px] md:text-[13px] text-white/70 leading-[1.7]">{s.desc}</p>
+                  </div>
+                  {/* Arrow */}
+                  <div className="flex items-center gap-2 mt-auto">
+                    <span className="text-[12px] font-bold text-white/80">詳しく見る</span>
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
+                      <ArrowRight size={16} className="text-white group-hover:translate-x-0.5 transition-transform duration-300" />
                     </div>
                   </div>
                 </div>
@@ -1391,16 +1418,16 @@ const CTABanner = () => (
       <div className="absolute inset-0 dot-pattern-dark pointer-events-none opacity-15" />
       <div className="absolute top-[25%] left-[6%] w-2 h-2 rounded-full bg-white/20 pointer-events-none animate-float-a" />
       <div className="absolute bottom-[30%] right-[10%] w-2.5 h-2.5 rounded-full bg-white/15 pointer-events-none animate-float-b" />
-      <div className="max-w-[600px] mx-auto px-4 md:px-8 py-8 md:py-14 text-center relative z-10">
+      <div className="max-w-[700px] mx-auto px-4 md:px-8 py-12 md:py-20 text-center relative z-10">
         <Reveal>
-          <p className="text-white text-[18px] md:text-[26px] font-black leading-[1.6] md:leading-[1.7] mb-5 font-display tracking-tight">
+          <p className="text-white text-[22px] md:text-[32px] font-black leading-[1.6] md:leading-[1.7] mb-6 md:mb-8 font-display tracking-tight">
             LINEマーケティングの<br />戦略設計からアカウント構築<br />運用・分析まで
           </p>
           <MagneticWrap className="inline-block" strength={0.2}>
-            <a href="#contact" className="btn-ripple group inline-flex items-center gap-2.5 md:gap-3 bg-white text-[#00BFA5] font-black rounded-full shadow-[0_4px_24px_rgba(255,255,255,.25)] hover:shadow-[0_8px_40px_rgba(255,255,255,.35)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 px-7 py-3.5 md:px-10 md:py-4.5 text-[14px] md:text-[16px] border-2 border-white/80" style={{ animation: "glow-pulse 3s ease-in-out infinite" }}>
-              <img src="/line-icon.png" alt="" className="w-5 h-5 md:w-6 md:h-6 rounded-md" />
+            <a href="#contact" className="btn-ripple group inline-flex items-center gap-3 md:gap-4 bg-white text-[#00BFA5] font-black rounded-full shadow-[0_4px_24px_rgba(255,255,255,.25)] hover:shadow-[0_8px_40px_rgba(255,255,255,.35)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 px-8 py-4 md:px-14 md:py-5.5 text-[16px] md:text-[20px] border-2 border-white/80" style={{ animation: "glow-pulse 3s ease-in-out infinite" }}>
+              <img src="/line-icon.png" alt="" className="w-6 h-6 md:w-8 md:h-8 rounded-md" />
               ご相談・お問合せ（無料）
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </MagneticWrap>
         </Reveal>
@@ -1422,9 +1449,12 @@ const Achievements = () => (
     <WaveSvg fill="#e0f5f2" />
     <div className="max-w-[1100px] mx-auto px-4 md:px-6 relative z-10">
       <Reveal>
-        <h2 className="text-[24px] md:text-[30px] font-bold text-black/70 tracking-[0.06em] mb-8 text-center">
-          成果事例
-        </h2>
+        <div className="flex flex-col items-center mb-8">
+          <img src="/badge-200.png" alt="運用実績200社以上" className="h-[80px] md:h-[110px] lg:h-[130px] w-auto drop-shadow-[0_4px_16px_rgba(0,0,0,.10)] mb-4" loading="lazy" />
+          <h2 className="text-[24px] md:text-[30px] font-bold text-black/70 tracking-[0.06em] text-center">
+            成果事例
+          </h2>
+        </div>
       </Reveal>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-8 md:items-stretch">
         {CASES.map((c, i) => (
@@ -1492,38 +1522,23 @@ const Strength = () => (
     <div className="absolute inset-0 crosshatch-pattern pointer-events-none" />
     <div className="absolute bottom-[-10%] right-[-8%] w-[30%] aspect-square rounded-full bg-[#00BFA5]/[.03] pointer-events-none animate-pulse-glow" />
     <div className="absolute top-[-5%] left-[-6%] w-[25%] aspect-square rounded-full bg-[#00BFA5]/[.04] pointer-events-none animate-drift-y" />
-    <div className="absolute top-[25%] right-[3%] w-3 h-3 rounded-full bg-[#00BFA5]/15 pointer-events-none animate-float-a" />
-    <div className="absolute bottom-[35%] left-[5%] w-2 h-2 rounded-full bg-[#00BFA5]/20 pointer-events-none animate-float-b" />
-    <div className="absolute inset-0 dot-pattern-white pointer-events-none" />
-    <div className="max-w-[1000px] mx-auto px-4 md:px-8 relative z-10">
+    <div className="max-w-[1100px] mx-auto px-4 md:px-8 relative z-10">
       <Reveal>
         <SectionHead>VOYAGEが選ばれる理由</SectionHead>
       </Reveal>
-      <div className="space-y-8 md:space-y-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {STRENGTHS.map((s, i) => (
-          <HorizontalReveal key={i} delay={i * 120} direction={i % 2 === 0 ? "left" : "right"}>
-            <div className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-4 md:gap-10 group`}>
-              <div className="w-full md:w-[45%] shrink-0 transition-transform duration-500 group-hover:scale-[1.03]">
-                <img
-                  src={s.img}
-                  alt={s.ja}
-                  className="w-full h-[160px] md:h-[240px] object-contain"
-                  loading="lazy"
-                  style={{
-                    mask: "radial-gradient(ellipse at center, black 40%, transparent 72%)",
-                    WebkitMask: "radial-gradient(ellipse at center, black 40%, transparent 72%)",
-                  }}
-                />
+          <Reveal key={i} delay={i * 100}>
+            <div className="h-full bg-gradient-to-br from-white to-gray-50/80 rounded-2xl border border-black/[.06] p-6 md:p-8 hover:shadow-[0_8px_32px_rgba(0,191,165,.10)] hover:-translate-y-1 transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[32px] md:text-[40px] font-black text-[#00BFA5]/20 font-en leading-none">{s.num}</span>
+                <div className="h-[2px] flex-1 bg-gradient-to-r from-[#00BFA5]/30 to-transparent" />
               </div>
-              <div className={`flex-1 ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                <span className="block text-[10px] md:text-[11px] font-bold text-[#00BFA5] tracking-widest font-en mb-2 md:mb-3">STRENGTH {String(i + 1).padStart(2, "0")}</span>
-                <GrowUnderline>
-                  <h3 className="text-[18px] md:text-[24px] font-black text-black mb-2 md:mb-3">{s.ja}</h3>
-                </GrowUnderline>
-                <p className="text-[13px] md:text-[14px] text-black/45 leading-[1.85] md:leading-[2]">{s.desc}</p>
-              </div>
+              <h3 className="text-[17px] md:text-[20px] font-black text-black/90 mb-2 leading-snug">{s.ja}</h3>
+              <p className="text-[12px] md:text-[13px] font-bold text-[#00BFA5] mb-4">{s.sub}</p>
+              <p className="text-[13px] md:text-[14px] text-black/50 leading-[1.85]">{s.desc}</p>
             </div>
-          </HorizontalReveal>
+          </Reveal>
         ))}
       </div>
     </div>
@@ -1717,7 +1732,7 @@ const Footer = () => (
    ═══════════════════════════════════════════════════════════ */
 export default function App() {
   return (
-    <div className="antialiased">
+    <div className="antialiased overflow-x-hidden">
       <ScrollProgressBar />
       <Header />
       <main>
@@ -1730,14 +1745,14 @@ export default function App() {
           body="多くの企業がLINEを「連絡ツール」としてしか活用できていません。VOYAGEは200社超の運用データに基づき、採用・集客の両面からLINEの持つ本来の力を引き出し、貴社の事業成長を加速させます。"
         />
         <MarketData />
+        <Strength />
+        <CTABanner />
+        <Achievements />
+        <Flow />
+        <Service />
         <YouTubeSection />
         <BackstageGroup />
         <Leadership />
-        <Service />
-        <CTABanner />
-        <Achievements />
-        <Strength />
-        <Flow />
         <FAQ />
         <Contact />
       </main>
